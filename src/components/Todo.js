@@ -1,24 +1,26 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 import { View, Text, StyleSheet } from "react-native";
 
-export default class Todo extends Component {
-  static propTypes = {
-    title: PropTypes.string.isRequired
-  };
+const Todo = props => (
+  <View>
+    <Text>{props.title}</Text>
+  </View>
+);
 
-  render() {
-    return (
-      <View>
-        <Text>{this.props.title}</Text>
-      </View>
-    );
-  }
-}
+Todo.defaultProps = {
+  title: "Ser PLENO em React native"
+};
+
+Todo.propTypes = {
+  title: PropTypes.string.isRequired
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1
   }
 });
+
+export default Todo;
