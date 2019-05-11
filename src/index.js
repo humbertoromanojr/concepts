@@ -18,11 +18,15 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#333"
+    backgroundColor: "#333",
+    // default
+    // flexDirection: 'column',
+    flexDirection: "row"
   },
   box: {
     width: 80,
     height: 80,
-    backgroundColor: "#f00"
+    backgroundColor: "#f00",
+    margin: 20
   }
 });
