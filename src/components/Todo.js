@@ -6,7 +6,7 @@ export default class Todo extends Component {
   render() {
     return (
       <View>
-        <Text>Estudar React Native</Text>
+        <Text>{this.props.title}</Text>
       </View>
     );
   }
