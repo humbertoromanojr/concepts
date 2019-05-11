@@ -8,7 +8,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <Todo title="Ser Pleno em React Native" />
-        <Todo />
+        <Todo title="Focado ser PLENO em Agosto 2019" />
       </View>
     );
   }
