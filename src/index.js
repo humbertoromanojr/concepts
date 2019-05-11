@@ -1,14 +1,24 @@
 import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 
 import Todo from "./components/Todo";
 
 export default class App extends Component {
+  state = {
+    todos: ["Fazer café", "Estudar o GoNative", "Estudar javascript"]
+  };
+
+  addTodo = () => {
+    this.setState({ todos: ["Ser PLENO React Native"] });
+  };
+
   render() {
     return (
       <View style={styles.container}>
-        <Todo title="Ser Pleno em React Native" />
-        <Todo title="Focado ser PLENO em Agosto 2019" />
+        {this.state.todos.map(todo => (
+          <Todo title={todo} />
+        ))}
+        <Button title="Add Todo" onPress={this.addTodo} />
       </View>
     );
   }
