@@ -9,7 +9,7 @@ export default class App extends Component {
   };
 
   addTodo = () => {
-    this.setState({ todos: ["Ser PLENO React Native"] });
+    this.setState({ todos: [...this.state.todos, "Ser Pleno este ano"] });
   };
 
   render() {
