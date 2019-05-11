@@ -58,6 +58,14 @@ export default class App extends Component {
     this.setState({ counter: this.state.counter + 1 });
   };
 
+  componentDidUpdate(prevProps, prevState) {
+    /**
+     * executado depois do component executar render()
+     *
+     * executed after the render () component
+     */
+  }
+
   addTodo = () => {
     this.setState({
       todos: [
