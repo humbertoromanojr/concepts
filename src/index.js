@@ -66,6 +66,16 @@ export default class App extends Component {
      */
   }
 
+  componentWillUnmount() {
+    /**
+     * executado antes do component ser desmontado da tela,
+     * ótimo para remover eventListener
+     *
+     * executed before the component is unmounted from the screen,
+     * great for removing eventListener
+     */
+  }
+
   addTodo = () => {
     this.setState({
       todos: [
