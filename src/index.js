@@ -7,6 +7,7 @@ export default class App extends Component {
   state = {
     user: "Humberto Jr",
     inCall: "",
+    counter: 0,
     todos: [
       { id: 0, text: "Fazer café" },
       { id: 1, text: "Estudar o GoNative" },
@@ -41,6 +42,22 @@ export default class App extends Component {
     return { inCall: nextProps.inCall };
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    /**
+     * chamado a cada atualização,  antes mesmo do componente atualizar
+     *
+     * called every update, even before the update component
+     */
+
+    //return true;
+
+    return nextState.counter < 10;
+  }
+
+  handleAddCounter = () => {
+    this.setState({ counter: this.state.counter + 1 });
+  };
+
   addTodo = () => {
     this.setState({
       todos: [
@@ -53,13 +70,21 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>{this.state.user}</Text>
-        <Text>{this.state.inCall}</Text>
-        {this.state.todos.map(todo => (
-          <Todo key={todo.id} title={todo.text} />
-        ))}
+        <View>
+          <Text>{this.state.user}</Text>
+          <Text>{this.state.inCall}</Text>
 
-        <Button title="Add Todo" onPress={this.addTodo} />
+          {this.state.todos.map(todo => (
+            <Todo key={todo.id} title={todo.text} />
+          ))}
+
+          <Button title="Add Todo" onPress={this.addTodo} />
+        </View>
+
+        <View>
+          <Text>{this.state.counter}</Text>
+          <Button title="Counter" onPress={this.handleAddCounter} />
+        </View>
       </View>
     );
   }
