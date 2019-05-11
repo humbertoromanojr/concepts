@@ -3,9 +3,10 @@ import PropTypes from "prop-types";
 
 import { View, Text, StyleSheet } from "react-native";
 
-const Todo = props => (
+// desestructuring ES6 -> props.title
+const Todo = ({ title }) => (
   <View>
-    <Text>{props.title}</Text>
+    <Text>{title}</Text>
   </View>
 );
 
