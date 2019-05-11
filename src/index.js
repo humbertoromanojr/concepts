@@ -6,12 +6,22 @@ import Todo from "./components/Todo";
 export default class App extends Component {
   state = {
     user: "Humberto Jr",
+    inCall: "",
     todos: [
       { id: 0, text: "Fazer café" },
       { id: 1, text: "Estudar o GoNative" },
       { id: 2, text: "Estudar javascript" }
     ]
   };
+
+  componentDidMount() {
+    // executado na hora o component for renderizado na tela
+    // executed on time the component is rendered on the screen
+
+    setTimeout(() => {
+      this.setState({ inCall: "Hello World, serei PLENO em React Native" });
+    }, 3000);
+  }
 
   addTodo = () => {
     this.setState({
@@ -26,6 +36,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <Text>{this.state.user}</Text>
+        <Text>{this.state.inCall}</Text>
         {this.state.todos.map(todo => (
           <Todo key={todo.id} title={todo.text} />
         ))}
