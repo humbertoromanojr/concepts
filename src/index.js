@@ -23,6 +23,24 @@ export default class App extends Component {
     }, 3000);
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    /**
+     * - Static, sem acesso a variável This;
+     * - só consegue acessar via parametros (nextProps, prevState);
+     * - executado antes ComponentDidMount e de cada atualização;
+     * - unica responsabilidade, se tiver alguma variável no State que depende de algum valor em nossas propriedades;
+     */
+
+    /**
+     * - Static, without access to variable This;
+     * - can only access via parameters (nextProps, prevState);
+     * - executed before ComponentDidMount and each update;
+     * - only liability if you have any variable in the State that depends on some value in our properties;
+     */
+
+    return { inCall: nextProps.inCall };
+  }
+
   addTodo = () => {
     this.setState({
       todos: [
