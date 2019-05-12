@@ -19,16 +19,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#333",
-    // default
-    // flexDirection: 'column',
+    // default - flexDirection: 'column',
     flexDirection: "row",
     // include elements below
-    flexWrap: "wrap"
+    flexWrap: "wrap",
+    // dafelut - justifyContent: 'flex-start',
+    justifyContent: "center"
   },
   box: {
     width: 80,
     height: 80,
     backgroundColor: "#f00",
-    margin: 20
+    margin: 10
   }
 });
