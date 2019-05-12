@@ -7,7 +7,9 @@ export default class App extends Component {
       <View style={styles.container}>
         <View style={styles.box} />
         <View style={styles.box} />
-        <View style={styles.box} />
+        <View style={styles.box}>
+          <Text style={styles.textWhite}>Pleno React Native</Text>
+        </View>
       </View>
     );
   }
@@ -31,6 +33,10 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     backgroundColor: "#f00",
-    margin: 10
+    margin: 10,
+    padding: 10
+  },
+  textWhite: {
+    color: "#fff"
   }
 });
