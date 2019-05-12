@@ -23,8 +23,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     // include elements below
     flexWrap: "wrap",
-    // dafelut - justifyContent: 'flex-start',
-    justifyContent: "center"
+    // dafault - justifyContent: 'flex-start',
+    justifyContent: "center",
+    // dafault - alignContent: 'flex-start',
+    alignContent: "center"
   },
   box: {
     width: 80,
