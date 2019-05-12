@@ -1,27 +1,26 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from 'react-native';
 
-// desestructuring ES6 -> props.title
-const Todo = ({ title }) => (
+const Todo = props => (
   <View>
-    <Text>{title}</Text>
+    <Text>{props.title}</Text>
   </View>
 );
 
 Todo.defaultProps = {
-  title: "Ser PLENO em React native"
+  title: 'Ser PLENO em React native',
 };
 
 Todo.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
-  }
+    flex: 1,
+  },
 });
 
 export default Todo;

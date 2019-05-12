@@ -1,17 +1,24 @@
-import "./config/ReactotronConfig";
+import React, { Component } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
-import React, { Component } from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
+import './config/ReactotronConfig';
+import './config/DevToolsConfig';
+
+import Todo from './components/Todo';
+
+  <script src="http://192.168.2.106:8097" />;
 
 export default class App extends Component {
+  state = {
+    user: 'Humberto Jr',
+    todos: [{ id: 0, text: 'fazer café' }],
+  };
+
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.box} />
-        <View style={styles.box} />
-        <View style={styles.box}>
-          <Text style={styles.textWhite}>Pleno React Native</Text>
-        </View>
+        <Text>{this.state.user}</Text>
+        <Todo />
       </View>
     );
   }
@@ -20,25 +27,8 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#333",
-    // default - flexDirection: 'column',
-    flexDirection: "row",
-    // include elements below
-    flexWrap: "wrap",
-    // dafault - justifyContent: 'flex-start',
-    justifyContent: "center",
-    // dafault - alignItems: 'flex-start',
-    // funciona em uma linha - it works one line
-    alignItems: "center"
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  box: {
-    width: 80,
-    height: 80,
-    backgroundColor: "#f00",
-    margin: 10,
-    padding: 10
-  },
-  textWhite: {
-    color: "#fff"
-  }
 });
