@@ -21,7 +21,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#333",
     // default
     // flexDirection: 'column',
-    flexDirection: "row"
+    flexDirection: "row",
+    // include elements below
+    flexWrap: "wrap"
   },
   box: {
     width: 80,
