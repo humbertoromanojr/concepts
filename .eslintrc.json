@@ -6,7 +6,8 @@
   "extends": "airbnb",
   "globals": {
     "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
+    "SharedArrayBuffer": "readonly",
+    "__DEV__": true
   },
   "parserOptions": {
     "ecmaFeatures": {
@@ -22,5 +23,10 @@
       { "extensions": [".js", ".jsx"] }
     ],
     "import/prefer-default-export": "off"
+  },
+  "settings": {
+    "import/resolve": {
+      "babel-plugin-root-import": {}
+    }
   }
 }

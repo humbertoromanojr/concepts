@@ -4,9 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import './config/ReactotronConfig';
 import './config/DevToolsConfig';
 
-import Todo from './components/Todo';
-
-  <script src="http://192.168.2.106:8097" />;
+import TodoList from '~/components/Todos/Example/TodoList';
 
 export default class App extends Component {
   state = {
@@ -18,7 +16,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <Text>{this.state.user}</Text>
-        <Todo />
+        <TodoList />
       </View>
     );
   }
