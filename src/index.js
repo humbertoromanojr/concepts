@@ -8,8 +8,6 @@ export default class App extends Component {
         <View style={styles.box} />
         <View style={styles.box} />
         <View style={styles.box} />
-        <View style={styles.box} />
-        <View style={styles.box} />
       </View>
     );
   }
@@ -25,8 +23,9 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     // dafault - justifyContent: 'flex-start',
     justifyContent: "center",
-    // dafault - alignContent: 'flex-start',
-    alignContent: "center"
+    // dafault - alignItems: 'flex-start',
+    // funciona em uma linha - it works one line
+    alignItems: "center"
   },
   box: {
     width: 80,
